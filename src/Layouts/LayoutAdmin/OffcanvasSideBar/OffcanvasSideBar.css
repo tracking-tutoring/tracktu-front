@@ -1,0 +1,22 @@
+#OffcanvasSideBar #offcanvasWithBothOptions{
+   width: 250px;
+}
+
+#OffcanvasSideBar #offcanvasWithBothOptions .offcanvas-header{
+   height: 70px;
+   background-color: #fff;
+   padding: 0px;
+   width: 100%;
+}
+
+#OffcanvasSideBar #offcanvasWithBothOptions .offcanvas-body{
+   padding: 15px;
+   height: 100vh;
+   background-color: #1d4f91 ;
+
+}
+
+#OffcanvasSideBar .btn-toggle{
+   background-color: transparent;
+   border: none;
+}

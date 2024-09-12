@@ -1,0 +1,46 @@
+/* =====Style de SideBar Top "SB-Top" =========== */
+.SB-Top {
+   min-height: 70px;
+   background-color: #fff;
+}
+
+.SB-Top h6 {
+   color: #1d4f91;
+   font-size: 19px;
+   font-weight: 700;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   transition: display 0.3s ease;
+}
+
+#content-sidebar img {
+   transition: display 0.3s ease;
+}
+
+.SB-Top button svg {
+   color: #1d4f91;
+   font-weight: 700;
+}
+
+.ControlDimSB #content-sidebar h6 {
+   display: none;
+}
+
+.ControlDimSB #content-sidebar img {
+   display: none;
+}
+
+
+/* =====Style de SideBar Bottom "SB-Bottom" =========== */
+.SB-Bottom {
+   padding: 15px;
+   height: 100vh;
+   background-color: #1d4f91;
+   overflow: hidden;
+   transition: width 0.3s ease;
+}
+
+/* .ControlDimSB #side-bar:hover .SB-Bottom {
+   width: 250px !important;
+   height: 100vh !important;
+   z-index: 1;
+} */
