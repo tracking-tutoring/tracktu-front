@@ -11,7 +11,7 @@ This project is the frontend part of the tracking tutoring project.
 
 ## Technologies
 
-* [React](https://laravel.com/): Version ^18.3.1
+* [React](https://fr.react.dev/): Version ^18.3.1
 
 ## Project Team
 
