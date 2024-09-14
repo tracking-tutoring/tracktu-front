@@ -8,7 +8,7 @@ export default function NavBar() {
       <div className='d-lg-none'>
         <OffcanvasSideBar />
       </div>
-      Tractu-front
+      tracktu-front
     </div>
   )
 }
