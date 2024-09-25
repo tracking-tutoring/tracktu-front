@@ -1,6 +1,7 @@
 import React from 'react'
 import { TfiAlignLeft } from "react-icons/tfi";
 import './OffcanvasSideBar.css'
+import LinkSideBar from '../../../Components/LinkSideBar/LinkSideBar';
 
 export default function OffcanvasSideBar() {
    return (
@@ -17,11 +18,10 @@ export default function OffcanvasSideBar() {
                </div>
             </div>
             <div className="offcanvas-body">
-               <div>
-                  <a href="#" className='text-white'>Dashboard</a>
-               </div>
-               <div>
-                  <a href="/" className='text-danger'>Deconnexion</a>
+               <div className='SB-Bottom mt-3'>
+                  <div>
+                     <LinkSideBar />
+                  </div>
                </div>
             </div>
          </div>

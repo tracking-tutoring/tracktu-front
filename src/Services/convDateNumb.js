@@ -1,6 +1,6 @@
 export const converDateNumb = (date)=>{
 
-   const parts = date.split(/[- :]/); // Diviser la chaîne en parties (mois, jour, année, heure, minute)
+   const parts = date?.split(/[- :]/); // Diviser la chaîne en parties (mois, jour, année, heure, minute)
    const month = parseInt(parts[0], 10) - 1; // Mois (0-11)
    const day = parseInt(parts[1], 10);
    const year = parseInt(parts[2], 10);

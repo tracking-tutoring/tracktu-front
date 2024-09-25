@@ -1,0 +1,41 @@
+#formulaire form{
+   min-width: 75%;
+}
+#formulaire input {
+   font-family: "Roboto", sans-serif;
+   outline: 0;
+   background: #f2f2f2;
+   width: 100%;
+   border: 0;
+   margin: 0 0 15px;
+   border-radius: 0%;
+   padding: 15px;
+   box-sizing: border-box;
+   font-size: 15px;
+}
+#formulaire textarea{
+   min-height: 140px;
+   border-radius: 0%;
+}
+#formulaire label{
+   font-weight: 500;
+}
+#formulaire input[type='submit'] {
+   font-family: "Roboto", sans-serif;
+   text-transform: uppercase;
+   border-radius: 0%;
+   outline: 0;
+   background: #1d4f91;
+   min-width: 200px;
+   max-width: max-content;
+   border: 0;
+   padding: 15px;
+   color: #FFFFFF;
+   font-size: 14px;
+   -webkit-transition: all 0.3 ease;
+   transition: all 0.3 ease;
+   cursor: pointer;
+}
+#formulaire .form-group{
+   margin-bottom: 20px;
+}

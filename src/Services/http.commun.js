@@ -3,7 +3,7 @@ import axios from "axios";
 
 //=== Créez une instance Axios ===//
 const instance = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "http://localhost:8000/api/v1",
   headers: {
     "Content-Type": "application/json"
   }
@@ -11,6 +11,7 @@ const instance = axios.create({
 
 //=== Ajoutez un interceptor pour chaque requête sortante ===//
 instance.interceptors.request.use((config) => {
+  
   //=== Récupérez les données depuis sessionStorage ===//
   const authInfo = JSON.parse(sessionStorage.getItem('authInfo') || '{}');
   const user = JSON.parse(sessionStorage.getItem('userInfos') || '{}');

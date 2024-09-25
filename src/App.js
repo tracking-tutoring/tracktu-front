@@ -5,10 +5,12 @@ import { Routes } from 'react-router-dom';
 import Admin from './Pages/Admin/Admin';
 
 function App() {
+  
   return (
     <div>
       <Routes>
         {/* Ajout des routes d'authentification */}
+
         {Auth()}
 
         {/* =======SuperAdmin route======== */}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './SideBar.css'
 import { TfiAlignLeft } from "react-icons/tfi";
 import { TfiClose } from "react-icons/tfi";
+import LinkSideBar from '../../../Components/LinkSideBar/LinkSideBar';
 
 
 
@@ -32,12 +33,9 @@ const SideBar = ({ toggleDimClass }) => {
                </button>
             }
          </div>
-         <div className='SB-Bottom'>
+         <div className='SB-Bottom mt-3'>
             <div>
-               <a href="#" className='text-white'>Dashboard</a>
-            </div>
-            <div>
-               <a href="/" className='text-danger'>Deconnexion</a>
+               <LinkSideBar />
             </div>
          </div>
       </div>
