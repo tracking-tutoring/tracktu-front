@@ -1,0 +1,164 @@
+.container-setting {
+   padding: 32px 24px;
+   background-color: rgb(255, 255, 255);
+   color: rgb(17, 25, 39);
+   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px;
+   background-image: none;
+   overflow: hidden;
+   border-radius: 20px;
+}
+
+#setting h5 {
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+   line-height: 1.5;
+   color: #1d4f91;
+}
+
+#setting .infoUser {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   /* gap: 20px; */
+}
+
+#setting span{
+   width: 100px;
+   color: rgb(108, 115, 127);
+   line-height: 1.4375em;
+   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+   padding: 0px;
+   font-size: 14px;
+   font-weight: 500;
+   display: block;
+   z-index: 1;
+
+}
+#setting label{
+   color: rgb(108, 115, 127);
+   line-height: 1.4375em;
+   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+   padding: 0px;
+   font-size: 14px;
+   font-weight: 500;
+   display: block;
+   z-index: 1;
+   padding: 10px 0px;
+
+}
+#setting p{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   display: block;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 24px;
+   margin: 0 !important;
+   padding: 0 !important;
+}
+#setting .inputForm input[type]:not([type="submit"]){
+   color: #1d4f91;
+   border: 1px solid rgb(229, 231, 235);
+   border-radius: 5px;
+   box-sizing: content-box;
+   background: none;
+   height: 30px;
+   margin: 0px;
+   -webkit-tap-highlight-color: transparent;
+   display: block;
+   max-width: 500px !important;
+   width: 100%;
+   animation-name: mui-auto-fill-cancel;
+   animation-duration: 10ms;
+   padding:8px;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 24px;
+}
+#setting .inputForm input[type]:not([type="submit"]):focus {
+   /* Styles pour l'input lorsqu'il est actif (focus) */
+   border: 2px solid #1d4f91 !important; /* Couleur de la bordure */
+   outline: none;
+   box-shadow: 0 0 1px #007bff80;
+ }
+
+
+#contImgProfil {
+   position: relative !important;
+   width: max-content;
+   height: max-content;
+   padding: 3px;
+   border: 0.80px dashed #d2d6db;
+   border-radius: 100%;
+   margin-bottom: 1rem;
+}
+
+.circle {
+   border-radius: 100% !important;
+   overflow: hidden;
+   width: 100px;
+   height: 100px;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+.file-upload {
+   position: absolute;
+   opacity: 0;
+   width: 32px !important;
+   height: 32px !important;
+   bottom: 10px !important;
+   left: 80px;
+   cursor: pointer !important;
+}
+
+.upload-button {
+   position: absolute;
+   width: 32px !important;
+   height: 32px !important;
+   bottom: 10px !important;
+   left: 80px;
+   color: #1d4f91;
+   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+   margin-top: -30px;
+   /* Ajustement de la position */
+}
+
+.p-image:hover {
+   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.upload-button {
+   font-size: 2em;
+}
+
+.file-upload:hover .upload-button {
+   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+   color: #d3d1d1;
+}
+
+
+#setting input[type="submit"]{
+   padding: 10px;
+   background-color: #1d4f91;
+   border: none;
+   color: #fff;
+   min-width: 150px;
+   max-width: max-content !important;
+   border-radius: 5px;
+   font-size: 16px;
+   text-transform: uppercase;
+   font-weight: 600;
+   border: 2px solid #1d4f91;
+
+}
+
+#setting input[type="submit"]:hover{
+   background-color: #fff;
+   border: 2px solid #1d4f91;
+   color: #1d4f91;
+}

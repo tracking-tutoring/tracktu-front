@@ -1,0 +1,115 @@
+#LinkSideBar a {
+   text-decoration: none;
+   width: 100%;
+   display: flex;
+   position: relative;
+   box-sizing: border-box;
+   text-align: left;
+   align-items: center;
+   padding: 15px;
+   justify-content: flex-start;
+   text-decoration: none;
+   gap: 10px;
+   border-radius: 5px;
+}
+
+#LinkSideBar a:hover {
+   background-color: #388dfb67 !important;
+   color: blue !important;
+}
+
+#LinkSideBar svg {
+   width: 1em;
+   height: 1em;
+   overflow: hidden;
+   font-size: 1.5rem;
+   flex-shrink: 0;
+   user-select: none;
+   color: #fff;
+}
+
+#LinkSideBar span {
+   color: #fff;
+   font-size: 1rem;
+   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+   font-weight: 600;
+   line-height: 1.5;
+   letter-spacing: 0.00938em;
+}
+
+.ControlDimSB #content-sidebar #LinkSideBar span {
+   display: none;
+}
+
+/* .ControlDimSB #side-bar:hover #LinkSideBar span {
+   display: block !important;
+} */
+
+#LinkSideBar button {
+   text-decoration: none;
+   width: 100%;
+   display: flex;
+   position: relative;
+   box-sizing: border-box;
+   text-align: left;
+   align-items: center;
+   padding: 15px;
+   justify-content: flex-start;
+   text-decoration: none;
+   gap: 10px;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   background-color: transparent;
+}
+.ControlDimSB #content-sidebar #LinkSideBar button {
+   display: flex;
+   gap: 2px !important;
+}
+#LinkSideBar button:hover {
+   background-color: #388dfb67 !important;
+   color: blue !important;
+}
+
+/* =======accordion =========== */
+
+/* #LinkSideBar .notActive {
+   display: none;
+   -webkit-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+
+#LinkSideBar .active {
+   display: block;
+   -webkit-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+} */
+
+#LinkSideBar {
+   overflow: hidden; /* Assure que le contenu ne dépasse pas lorsque la hauteur est animée */
+}
+
+#LinkSideBar .notActive {
+   opacity: 0;           /* Rendre l'élément invisible */
+   height: 0;            /* Réduire la hauteur à 0 pour cacher l'élément */
+   visibility: hidden;    /* Cacher l'élément visuellement et pour la navigation */
+   -webkit-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+
+#LinkSideBar .active {
+   opacity: 1;           /* Rendre l'élément visible */
+   height: auto;         /* Ajuster la hauteur à son contenu */
+   visibility: visible;  /* Rendre l'élément visible */
+   -webkit-transition: all .6s ease-in-out;
+   transition: all .6s ease-in-out;
+}
+
+
+#LinkSideBar ul {
+   padding-left: 12px !important;
+}
+
+#LinkSideBar li {
+   list-style-type: none;
+}

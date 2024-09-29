@@ -7,7 +7,7 @@ export default function ForgetPassword() {
    const navigate = useNavigate()
 
    return (
-      <div className="login-page">
+      <div className="login-page auth">
          <div className="form">
             <form className="login-form">
                <h3 className='pb-3'>Vous avez oublié votre mot de passe ?</h3>
