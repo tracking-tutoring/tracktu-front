@@ -1,36 +1,28 @@
-# Getting Started with Create React App
+## Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [General info](#general-info)
+2. [Technologies](#technologies)
+3. [Project Team](#project-team)
+4. [Installation](#installation)
 
-## Available Scripts
+## General info
 
-In the project directory, you can run:
+This project is the frontend part of the tracking tutoring project.
 
-### `npm install`
-Pour installer les packages du projet 
+## Technologies
 
+* [React](https://fr.react.dev/): Version ^18.3.1
 
-### `npm start`
+## Project Team
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Henry Ibrahima Vincent Coly](https://github.com/devOFcentury)
+- [Alpha Oumar Barry](https://github.com/alphaoumar9231)
+- [Abdoul Niang](https://github.com/abdoulniang2000)
+- [Papa Alioune Gueye](https://github.com/linodev19)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clone project with: `git clone https://github.com/tracking-tutoring/tracktu-front.git`
+- navigate to the folder at root level with your terminal or cmd and run : `npm install`
+- Runs the app with : `npm start`
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
