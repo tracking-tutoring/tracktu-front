@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../Auth.css"
 import { Link, useNavigate } from 'react-router-dom'
-import { DASHBOARD_ADMIN, FORGET_PASSWORD } from '../../../Services/path'
+import { DASHBOARD_ADMIN, DASHBOARD_TUTEUR, FORGET_PASSWORD } from '../../../Services/path'
 import { ServicesResqueteAPI } from '../../../Services/resquet.api';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
@@ -35,7 +35,12 @@ export default function Login() {
         sessionStorage.setItem('authInfo', JSON.stringify(auth))
         sessionStorage.setItem('userInfos', JSON.stringify(response.data.user))
         toast.success("Votre connexion est un succès");
-        navigate(DASHBOARD_ADMIN)
+        if (response.data.user.role === "tutor") {
+          navigate(DASHBOARD_TUTEUR)
+        }else if(response.data.user.role === "tracking"){
+          navigate(DASHBOARD_ADMIN)
+        }
+
         // window.location.reload();
       })
       .catch(() => {

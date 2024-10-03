@@ -1,19 +1,9 @@
 import http from "./http.commun";
 
-export const  ServicesResqueteAPI = {
+export const ServicesResqueteAPI = {
 
    // ========Authentification ============//
-   getUser(id) {
-      return http.get(`/users/${id}`);
-   },
 
-   createUser(data) {
-      return http.post("/register", data);
-   },
-
-   updateUser(data, id) {
-      return http.put(`/users/${id}`, data);
-   },
 
    login(data) {
       return http.post("/login", data);
@@ -36,7 +26,88 @@ export const  ServicesResqueteAPI = {
       return http.post(`/change-password/${token}`, data);
    },
 
-   // ========Other resquete api ============//
+   // ======== resquete user with UserRole ============//
+
+   createUsers(data) {
+      return http.post(`/tracking/users`, data);
+   },
+
+   getUsers(userRole) {
+      return http.get(`/tracking/users/${userRole}`);
+   },
+
+   getUser(userRole, userId) {
+      return http.get(`/tracking/users/${userRole}/${userId}`);
+   },
+
+   updateUser(userRole, userId, data) {
+      return http.post(`/tracking/users/${userRole}/${userId}`, data);
+   },
+
+
+   // ======== resquete Modules ============//
+
+   getModules() {
+      return http.get(`/tracking/modules`);
+   },
+
+   // ======== resquete Seances ============//
+
+   getSeances() {
+      return http.get(`/tracking/sessions`);
+   },
+
+   // ======== resquete groupes ============//
+
+   createGroupes(data) {
+      return http.post(`/tracking/groups`, data);
+   },
+
+   getGroupes() {
+      return http.get(`/tracking/groups`);
+   },
+
+   getGroupe(groupId) {
+      return http.get(`/tracking/groups/${groupId}`);
+   },
+
+   deleteGroupe(groupId) {
+      return http.get(`/tracking/groups/${groupId}`);
+   },
+
+   updateGroupe(groupId, data) {
+      return http.put(`/tracking/groups/${groupId}`, data);
+   },
+
+
+    // ======== resquete affectations ============//
+
+    createAffectations(data) {
+      return http.post(`/tracking/affectations/groups`, data);
+   },
+
+   getAffectations() {
+      return http.get(`/tracking/affectations`);
+   },
+
+   getAffectation(groupId) {
+      return http.get(`/tracking/affectations/${groupId}`);
+   },
+
+   deleteAffectation(groupId) {
+      return http.get(`/tracking/affectations/${groupId}`);
+   },
+
+   updateAffectation(groupId, data) {
+      return http.put(`/tracking/affectations/${groupId}`, data);
+   },
+
+   // api/v1/tracking/affectations/groups .......................................................... Api\V1\AffectationController@store
+   // DELETE    api/v1/tracking/affectations/groups ........................................................ Api\V1\AffectationController@destroy
+   // POST      api/v1/tracking/affectations/groups/link-students ............................... Api\V1\AffectationController@linkStudentsGroups
+   // POST      api/v1/tracking/affectations/tutor ..................................................... Api\V1\AffectationController@assignTutor
+   // DELETE    api/v1/tracking/affectations/tutor
+
 
 
 }

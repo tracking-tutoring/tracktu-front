@@ -2,8 +2,11 @@ import React from 'react'
 import { TfiAlignLeft } from "react-icons/tfi";
 import './OffcanvasSideBar.css'
 import LinkSideBar from '../../../Components/LinkSideBar/LinkSideBar';
+import LinkSideBarTutor from '../../../Components/LinkSideBar/LinkSideBarTutor';
 
 export default function OffcanvasSideBar() {
+   const userInfo = JSON.parse(sessionStorage.getItem('userInfos') || '{}');
+
    return (
       <div id='OffcanvasSideBar'>
          <button className="btn-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
@@ -20,7 +23,9 @@ export default function OffcanvasSideBar() {
             <div className="offcanvas-body">
                <div className='SB-Bottom mt-3'>
                   <div>
-                     <LinkSideBar />
+                     {
+                        userInfo.role === "tutor" ? <LinkSideBarTutor /> : <LinkSideBar />
+                     }
                   </div>
                </div>
             </div>

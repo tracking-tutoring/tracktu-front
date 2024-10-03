@@ -3,7 +3,7 @@ import { SlLogout } from "react-icons/sl";
 import { BiUser } from "react-icons/bi";
 import "./DropdownProfil.css"
 import { Link, useNavigate } from 'react-router-dom';
-import { PROFIL_ADMIN } from '../../Services/path';
+import { PROFIL_ADMIN, PROFIL_TUTOR } from '../../Services/path';
 
 export default function DropdownProfil() {
    const [dropdownActive, setDropdownActive] = useState(false)
@@ -46,6 +46,8 @@ export default function DropdownProfil() {
 
      navigate('/');  // Redirige vers la page d'accueil après la déconnexion
    };
+
+   const linkProfil = userInfoString.role === "tutor" ? PROFIL_TUTOR : PROFIL_ADMIN;
    return (
       <div className="dropdownProf" id='DropdownProfil'>
 
@@ -55,7 +57,7 @@ export default function DropdownProfil() {
          </button>
          <div id="myDropdown" className={dropdownActive === false ? "dropdown-content" : "show dropdown-content"}>
             <p>{userInfoString.lastname} <span className='text-uppercase'>{userInfoString.firstname}</span></p>
-            <Link to={PROFIL_ADMIN}><BiUser /> <span>Profil</span></Link>
+            <Link to={linkProfil}><BiUser /> <span>Profil</span></Link>
 
             <button onClick={()=>handleLogout()}>
                <SlLogout /><span>Déconnexion</span>

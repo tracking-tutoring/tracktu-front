@@ -1,0 +1,11 @@
+td .action-btn .btn{
+   color: #fff !important;
+   font-size: 19px;
+}
+
+@media only screen and (min-width: 900px) {
+
+   .showElmt table{
+      width: 75% ;
+   }
+}

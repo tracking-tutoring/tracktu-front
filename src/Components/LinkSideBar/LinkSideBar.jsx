@@ -12,7 +12,9 @@ import { CgLogOff } from "react-icons/cg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import "./LinkSideBar.css"
-import { ADMINISTRATION, DASHBOARD_ADMIN, LOGIN, MODULE_ADMIN, PROFIL_ADMIN, SEANCE_ADMIN, TUTEURS, UPDATE_PASSWORD_ADMIN, UPDATE_PROFIL_ADMIN } from '../../Services/path';
+import { ADMINISTRATION, AFFECTATIONS, DASHBOARD_ADMIN, GROUPES, LOGIN, MODULE_ADMIN, PROFIL_ADMIN, SEANCE_ADMIN, TUTEURS, UPDATE_PASSWORD_ADMIN, UPDATE_PROFIL_ADMIN } from '../../Services/path';
+import { HiOutlineUserGroup } from 'react-icons/hi';
+import { LuTarget } from 'react-icons/lu';
 
 export default function LinkSideBar() {
    const [accordionIsOpen, setAccordionIsOpen] = useState(false)
@@ -52,6 +54,14 @@ export default function LinkSideBar() {
          <Link to={MODULE_ADMIN}>
             <GiBookmarklet />
             <span>Modules</span>
+         </Link>
+         <Link to={GROUPES}>
+            <HiOutlineUserGroup />
+            <span>Groupes</span>
+         </Link>
+         <Link to={AFFECTATIONS}>
+            <LuTarget  />
+            <span>Affectations</span>
          </Link>
 
 
