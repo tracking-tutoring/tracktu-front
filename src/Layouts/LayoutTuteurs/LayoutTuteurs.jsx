@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import '../Layout.css'
-import SideBar from './SideBar/SideBar'
-import NavBar from './NavBar/NavBar'
+
 import { Outlet } from 'react-router-dom'
+import SideBar from '../LayoutAdmin/SideBar/SideBar';
+import NavBar from '../LayoutAdmin/NavBar/NavBar';
 
 export default function LayoutTuteurs() {
    const [isDimmed, setIsDimmed] = useState(false);
@@ -21,6 +22,7 @@ export default function LayoutTuteurs() {
          {/* ============NavBar============= */}
          <header id='nav-bar'>
             <NavBar />
+
          </header>
 
          {/* ============Containe-principale========== */}

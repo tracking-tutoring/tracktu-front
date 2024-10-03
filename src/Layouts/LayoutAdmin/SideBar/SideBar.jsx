@@ -3,11 +3,12 @@ import './SideBar.css'
 import { TfiAlignLeft } from "react-icons/tfi";
 import { TfiClose } from "react-icons/tfi";
 import LinkSideBar from '../../../Components/LinkSideBar/LinkSideBar';
+import LinkSideBarTutor from '../../../Components/LinkSideBar/LinkSideBarTutor';
 
 
 
 const SideBar = ({ toggleDimClass }) => {
-
+   const userInfo = JSON.parse(sessionStorage.getItem('userInfos') || '{}');
    const [isOpen, setIsOpen] = useState(true);
 
    const openSideBar = () => {
@@ -35,7 +36,9 @@ const SideBar = ({ toggleDimClass }) => {
          </div>
          <div className='SB-Bottom mt-3'>
             <div>
-               <LinkSideBar />
+               {
+                  userInfo.role === "tutor" ? <LinkSideBarTutor/> :<LinkSideBar />
+               }
             </div>
          </div>
       </div>
