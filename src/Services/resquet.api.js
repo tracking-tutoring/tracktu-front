@@ -61,6 +61,15 @@ export const ServicesResqueteAPI = {
       return http.get(`/tracking/sessions`);
    },
 
+   getSeancesOfTutors(tutorId, moduleId = null) {
+      const url = moduleId ? `/tracking/sessions/tutor/${tutorId}/${moduleId}` : `/tracking/sessions/tutor/${tutorId}`
+      return http.get(url)
+   },
+
+   markSession(sessionId, data) {
+      return http.put(`/tracking/sessions/mark/${sessionId}`, data)
+   },
+
    // ======== resquete groupes ============//
 
    createGroupes(data) {
