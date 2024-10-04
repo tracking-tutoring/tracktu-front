@@ -85,7 +85,7 @@ export default function AddAffectations() {
                </div>
 
                <div className='form-group'>
-                  <label className='form-label'>Selectionné un Groupe</label>
+                  <label className='form-label'>Selectionner un Groupe</label>
                   <select className='form-control' {...register("group_id", { required: true, pattern: /^[0-9]+$/ })}>
                      <option >Selectionné un groupe</option>
                      {groupes?.map((groupe) => (
@@ -98,7 +98,7 @@ export default function AddAffectations() {
                </div>
 
                <div className='form-group'>
-                  <label className='form-label'>Selectionné un Tuteur</label>
+                  <label className='form-label'>Selectionner un Tuteur</label>
                   <select className='form-control' {...register("tutor_id", { required: true, pattern: /^[0-9]+$/ })}>
                      <option >Selectionné un module</option>
                      {tuteurs?.map((tuteur) => (
@@ -111,7 +111,7 @@ export default function AddAffectations() {
                </div>
 
                <div className='form-group'>
-                  <label className='form-label'>Selectionné une Module</label>
+                  <label className='form-label'>Selectionner une Module</label>
                   <select className='form-control' {...register("module_id", { required: true, pattern: /^[0-9]+$/ })}>
                      <option >Selectionné un module</option>
                      {modules?.map((module) => (
