@@ -7,6 +7,8 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import { Table } from 'react-bootstrap'
 import { ServicesResqueteAPI } from '../../../Services/resquet.api'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import Swal from 'sweetalert2'
 
 export default function Tuteurs() {
 
@@ -29,6 +31,30 @@ export default function Tuteurs() {
    useEffect(() => {
       fetchData();
    }, []);
+
+   const handleDelete = async (id) => {
+      try {
+         const result = await Swal.fire({
+            title: 'Êtes-vous sûr?',
+            text: "Vous ne pourrez pas revenir en arrière!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Oui, supprimer!',
+            cancelButtonText: 'Annuler'
+         });
+
+         if (result.isConfirmed) {
+            await ServicesResqueteAPI.deleteUsers(id).then(() => {
+               toast.success('Le tuteur a été supprimé.');
+               fetchData();
+            })
+         }
+      } catch (error) {
+         console.error("Error deleting tuteur:", error);
+      }
+   };
 
    return (
       <div>
@@ -56,7 +82,7 @@ export default function Tuteurs() {
                               <div className='d-flex gap-2'>
                                  <Link to={`${UPDATE_TUTEUR}/${item.id}`} className='btn btn-info'><FaEdit /></Link>
                                  <Link to={`${SHOW_TUTEUR}/${item.id}`} className='btn btn-secondary'><FaEye /></Link>
-                                 <button className='btn btn-danger'><RiDeleteBin6Line /></button>
+                                 <button onClick={()=>handleDelete(item.id)} className='btn btn-danger'><RiDeleteBin6Line /></button>
                               </div>
                            </td>
                         </tr>
