@@ -36,6 +36,10 @@ export const ServicesResqueteAPI = {
       return http.get(`/tracking/users/${userRole}`);
    },
 
+   deleteUsers(userId) {
+      return http.delete(`/tracking/users/${userId}`);
+   },
+
    getUser(userRole, userId) {
       return http.get(`/tracking/users/${userRole}/${userId}`);
    },
@@ -80,9 +84,9 @@ export const ServicesResqueteAPI = {
    },
 
 
-    // ======== resquete affectations ============//
+   // ======== resquete affectations ============//
 
-    createAffectations(data) {
+   createAffectations(data) {
       return http.post(`/tracking/affectations/groups`, data);
    },
 
@@ -108,6 +112,26 @@ export const ServicesResqueteAPI = {
    // POST      api/v1/tracking/affectations/tutor ..................................................... Api\V1\AffectationController@assignTutor
    // DELETE    api/v1/tracking/affectations/tutor
 
+   // ======== resquete affectations ============//
 
+   createModules(data) {
+      return http.post(`/tracking/modules`, data);
+   },
+
+   getModules() {
+      return http.get(`/tracking/modules`);
+   },
+
+   getModule(moduleId) {
+      return http.get(`/tracking/modules/${moduleId}`);
+   },
+
+   deleteModule(moduleId) {
+      return http.delete(`/tracking/modules/${moduleId}`);
+   },
+
+   updateModule(moduleId, data) {
+      return http.put(`/tracking/modules/${moduleId}`, data);
+   },
 
 }

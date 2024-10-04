@@ -7,6 +7,8 @@ import { FaEye } from 'react-icons/fa6'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { ServicesResqueteAPI } from '../../../Services/resquet.api'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
+import { toast } from 'react-toastify'
 
 export default function Administrations() {
 
@@ -29,6 +31,30 @@ export default function Administrations() {
    useEffect(() => {
       fetchData();
    }, []);
+
+   const handleDelete = async (id) => {
+      try {
+         const result = await Swal.fire({
+            title: 'Êtes-vous sûr?',
+            text: "Vous ne pourrez pas revenir en arrière!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Oui, supprimer!',
+            cancelButtonText: 'Annuler'
+         });
+
+         if (result.isConfirmed) {
+            await ServicesResqueteAPI.deleteUsers(id).then(() => {
+               toast.success('L\'admin a été supprimé.');
+               fetchData();
+            })
+         }
+      } catch (error) {
+         console.error("Error deleting admin:", error);
+      }
+   };
 
    return (
       <div>
@@ -56,7 +82,7 @@ export default function Administrations() {
                               <div className='d-flex gap-2'>
                                  <Link to={`${UPDATE_ADMIN}/${item.id}`} className='btn btn-info'><FaEdit /></Link>
                                  <Link to={`${SHOW_ADMIN}/${item.id}`} className='btn btn-secondary'><FaEye /></Link>
-                                 <button className='btn btn-danger'><RiDeleteBin6Line /></button>
+                                 <button onClick={()=>handleDelete(item.id)} className='btn btn-danger'><RiDeleteBin6Line /></button>
                               </div>
                            </td>
                         </tr>
